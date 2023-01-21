@@ -1,0 +1,36 @@
+.row{
+    margin-left: 20px ;
+    color: #fff;
+}
+
+.row__posters{
+    display: flex;
+    overflow-y: hidden; /*we dont want to be able to scroll on y direction*/
+    overflow-x: scroll;
+    padding: 20px; /*when the image gets bigger we dont want to cut the image*/
+}
+
+.row__posters::-webkit-scrollbar{
+    display: none; /*we dont want to show thw scroll bar*/
+}
+
+.row__poster{
+    object-fit: contain; /*to maintain the aspect ratio*/
+    width: 100%;
+    max-height: 100px;
+    margin-right: 10px;
+    transition: all 460ms;
+}
+
+.row__poster:hover{
+    transform: scale(1.09);
+
+}
+
+.row__posterLarge{
+    max-height: 250px;
+}
+
+.row__posterLarge:hover{
+    transform: scale(1.10);
+}
